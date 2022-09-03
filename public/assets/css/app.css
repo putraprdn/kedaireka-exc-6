@@ -1,0 +1,107 @@
+:root {
+    --shade: #9CA3AF;
+}
+
+html {
+    scroll-behavior: smooth !important;
+}
+
+body {
+    background-color: #0C111B;
+    color: #fff;
+    min-height: 100vh !important;
+}
+
+.container .category-container:not(:first-child) {
+    margin-top: 2.5rem;
+}
+
+.dropdown-menu {
+    background-color: #575a5e;
+}
+
+.dropdown-item {
+    color: var(--shade);
+}
+
+.card {
+    width: 255px !important;
+    background-color: transparent;
+    border-color: white;
+    /* height: 269.68px !important; */
+}
+
+.card .year,
+.card .genre {
+    color: var(--shade);
+    font-size: 12px;
+    transition: color 0.2s ease-in-out;
+}
+
+.card .genre:hover {
+    color: #6e1103;
+}
+
+.card .link-wrapper .genre:not(:last-child) {
+    margin-right: 5px;
+}
+
+.card-img-top {
+    /* width: 255px; */
+    height: 270px;
+    object-fit: fill;
+}
+
+.card .btn {
+    width: 100%;
+    opacity: 0;
+    /* opacity: 1; */
+    transition: opacity 0.2s ease-in-out;
+}
+
+.card:hover .btn {
+    opacity: 1 !important;
+}
+
+.card:hover {
+    border: 1px solid white !important;
+}
+
+
+.btn-primary,
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:focus,
+.btn-danger,
+.btn-danger:hover,
+.btn-danger:active,
+.btn-danger:focus,
+.btn-success,
+.btn-success:hover,
+.btn-success:active,
+.btn-success:focus {
+    border: 1px solid #FFFFFF;
+    background-color: transparent;
+    border-radius: 26px;
+    box-shadow: none !important;
+    transition: all 0.2s ease-in-out;
+}
+
+.btn-primary:hover,
+.btn-primary:active {
+    border-color: #0F54E0;
+    color: #0F54E0;
+}
+
+.btn-danger:hover,
+.btn-danger:active {
+    border-color: #A11703;
+    color: #A11703;
+}
+
+
+.btn-success:hover,
+.btn-success:active {
+    border-color: #4cb851;
+    color: #4cb851;
+}
