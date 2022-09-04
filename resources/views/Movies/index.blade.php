@@ -5,7 +5,7 @@
         <div class="category-container">
             <div class="d-flex justify-content-between mb-2">
                 <h3 id="{{ strToLower($genre->name) }}">{{ ucfirst($genre->name) }}</h3>
-                <p>View all</p>
+                <p class="text-small">Swipe &RightArrow;</p>
             </div>
             <!-- Swiper -->
             <div class="swiper mySwiper">
@@ -24,10 +24,11 @@
                                     @endphp
                                     <img src="{{ asset('assets/images/upload/' . $image) }}" class="card-img-top rounded-2">
                                     <div class="card-body p-3">
-                                        <p class="year card-text mb-2 fs-6">{{ Str::upper($movie->country) }},
+                                        <p class="year card-text mb-2 fs-6">{{ ucfirst(strToLower($movie->country)) }},
                                             {{ $movie->year }}
                                         </p>
                                         <h5 class="title card-title fs-4">{{ ucwords(strtolower($movie->title), ' ') }}</h5>
+                                        {{-- <h5 class="title card-title fs-4">{{ $movie->title }}</h5> --}}
                                         @foreach ($movieGenreOnly as $movieGenre)
                                             @if ($movie->movie_id === $movieGenre->id)
                                                 @php
@@ -46,7 +47,8 @@
                                         @endforeach
                                         <div class="card__button-container row flex-column justify-content-between m-0">
                                             <div class="p-0 mb-2">
-                                                <a class="btn btn-primary" href="{{ route('movie_edit', $movie->movie_id) }}">
+                                                <a class="btn btn-primary"
+                                                    href="{{ route('movie_edit', $movie->movie_id) }}">
                                                     Edit
                                                 </a>
                                             </div>

@@ -26,9 +26,10 @@ class MovieController extends Controller
 
         $movieInfo = Movie::Select('movies.*', 'genre_movie.*')
             ->join('genre_movie', 'movies.id', '=', 'genre_movie.movie_id')
-            ->orderBy('genre_movie.genre_id')
+            // ->orderBy('genre_movie.genre_id')
+            ->orderBy("updated_at", 'desc')
             ->get();
-            // ->toSql();
+        // ->toSql();
 
         // dd($movieInfo);
 
@@ -59,8 +60,8 @@ class MovieController extends Controller
         // $request->image->storeAs('images', $imageName);
 
         $movie = Movie::create([
-            "title" => strtolower($request->title),
-            "country" => strtolower($request->country),
+            "title" => $request->title,
+            "country" => $request->country,
             "year" => $request->year,
             "image" => $imageName ?? null
         ]);

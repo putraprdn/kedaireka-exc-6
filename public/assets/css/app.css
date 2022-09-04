@@ -12,8 +12,8 @@ body {
     min-height: 100vh !important;
 }
 
-.container .category-container:not(:first-child) {
-    margin-top: 2.5rem;
+.container .category-container {
+    margin-bottom: 2.5rem;
 }
 
 .dropdown-menu {
@@ -26,8 +26,11 @@ body {
 
 .card {
     width: 255px !important;
-    background-color: transparent;
-    border-color: white;
+    /* background-color: transparent; */
+    /* border-color: white; */
+    background-color: #0e1a3442;
+    border-color: #222428;
+    transition: all 0.25s ease-in-out;
     /* height: 269.68px !important; */
 }
 
@@ -56,15 +59,17 @@ body {
     width: 100%;
     opacity: 0;
     /* opacity: 1; */
-    transition: opacity 0.2s ease-in-out;
+    transition: opacity 0.3s ease-in-out;
 }
 
 .card:hover .btn {
     opacity: 1 !important;
+
 }
 
 .card:hover {
-    border: 1px solid white !important;
+    /* border: 1px solid white !important; */
+    background-color: #0e1a34fa;
 }
 
 
@@ -90,13 +95,16 @@ body {
 .btn-primary:hover,
 .btn-primary:active {
     border-color: #0F54E0;
+    /* border-color: #090d2e; */
+    background-color: #090d2e;
     color: #0F54E0;
 }
 
 .btn-danger:hover,
 .btn-danger:active {
-    border-color: #A11703;
-    color: #A11703;
+    background-color: #2a080b;
+    color: #ff2000;
+    border-color: #ff2000;
 }
 
 
