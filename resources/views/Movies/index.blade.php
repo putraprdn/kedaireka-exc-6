@@ -53,10 +53,10 @@
                                                 </a>
                                             </div>
                                             <div class="p-0">
-                                                <form action="{{ route('movie_destroy', $movie->id) }}" method="post">
+                                                <form action="{{ route('movie_destroy', $movie->movie_id) }}" method="post">
                                                     @csrf
                                                     @method('DELETE')
-                                                    <button class="btn btn-danger">
+                                                    <button class="btn btn-danger" type="submit">
                                                         Delete
                                                     </button>
                                                 </form>

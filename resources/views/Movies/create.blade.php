@@ -6,15 +6,15 @@
         <h3>Add New Movie</h3>
         <div class="mb-3">
             <label for="title" class="form-label">Judul</label>
-            <input type="text" class="form-control" id="title" placeholder="..." name="title">
+            <input type="text" class="form-control" id="title" name="title" required />
         </div>
         <div class="mb-3">
             <label for="year" class="form-label">Tahun</label>
-            <input class="form-control" id="year" name="year" type="number" />
+            <input class="form-control" id="year" name="year" type="number" required />
         </div>
         <div class="mb-3">
             <label for="country" class="form-label">Negara</label>
-            <input class="form-control" id="country" name="country" type="text" />
+            <input class="form-control" id="country" name="country" type="text" required />
         </div>
         <div class="mb-3">
             <p>Pilih Genre</p>

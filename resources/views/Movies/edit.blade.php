@@ -6,7 +6,7 @@
         <h3>Edit Movie</h3>
         <div class="mb-3">
             <label for="title" class="form-label">Judul</label>
-            <input type="text" class="form-control" id="title" placeholder="..." name="title"
+            <input type="text" class="form-control" id="title" name="title"
                 value="{{ $movie->title }}">
         </div>
         <div class="mb-3">
